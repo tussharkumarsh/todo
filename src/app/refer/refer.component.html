@@ -1,0 +1,10 @@
+<mat-card class="posts" *ngFor="let state of data">
+  <div class="cardItem">
+    <h1 style="margin: 0">
+      {{ state.state }}
+    </h1>
+    <div style="margin-left: 1.5rem" *ngFor="let district of state.districts">
+      {{ district }}
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,83 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar
+      ><img src="../../assets/img/logo1.jpg" width="100%" height="100px"
+    /></mat-toolbar>
+
+    <mat-nav-list>
+      <a routerLink="/task" mat-list-item href="#">
+        <span class="material-icons"> home </span>
+        Task</a
+      >
+      <a routerLink="/time" mat-list-item href="#"
+        ><span class="material-icons"> access_time </span>Time</a
+      >
+      <a routerLink="/project" mat-list-item href="#"
+        ><span class="material-icons"> folder </span>Projects</a
+      >
+      <a routerLink="/" mat-list-item href="#"
+        ><span class="material-icons">account_circle </span>Clients</a
+      >
+      <a routerLink="/team" mat-list-item href="#"
+        ><span class="material-icons">groups</span> Team</a
+      >
+      <a routerLink="/billing" mat-list-item href="#"
+        ><span class="material-icons">receipt_long </span>Billings</a
+      >
+
+      <a routerLink="/refer" mat-list-item href="#"
+        ><span class="material-icons">share</span>Refer it to a friend</a
+      >
+      <a routerLink="/notification" mat-list-item href="#"
+        ><span class="material-icons">notifications_none </span>Notification</a
+      >
+      <a routerLink="/user" mat-list-item href="#"
+        ><span class="material-icons">person</span>User</a
+      >
+
+      <a routerLink="/extra" mat-list-item href="#"
+        ><span class="material-icons">close</span>Extra</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <div class="header-row">
+        <div>Company Workspace</div>
+        <div>
+          <button>Upgrade</button>
+        </div>
+
+        <div class="homeButton">
+          <a routerLink="/">
+            <button mat-button>
+              <span class="material-icons"> home </span>
+              Home
+            </button>
+          </a>
+        </div>
+      </div>
+    </mat-toolbar>
+
+    <!-- <app-client-card> </app-client-card> -->
+    <router-outlet></router-outlet>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

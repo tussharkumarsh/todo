@@ -1,0 +1,102 @@
+<div class="taskColumn">
+  <mat-card class="task-card">
+    <div class="cardItem">
+      <h1>YESTERDAY TASK</h1>
+      <div
+        *ngIf="isTaskLoading"
+        style="
+          background-image: url(../../assets/img/untitled-5.gif);
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          opacity: 0.5;
+          z-index: 99999999999999999999999999999;
+        "
+      >
+        Loding...
+      </div>
+    </div>
+
+    <mat-card class="taskTodo" *ngFor="let todo of todos">
+      <div class="cardItem">
+        <h1>
+          <p>{{ todo.title }}</p>
+        </h1>
+        <p>{{ todo.completed === true ? "Completed" : "Not Completed" }}</p>
+      </div>
+    </mat-card>
+  </mat-card>
+
+  <mat-card class="task-card">
+    <div class="cardItem">
+      <h1>TODAYS TASK</h1>
+    </div>
+
+    <mat-card class="taskTodo">
+      <div class="cardItem">
+        <h1><p>Anagrama</p></h1>
+        <p>Dog Breed</p>
+      </div>
+    </mat-card>
+
+    <mat-card class="taskTodo">
+      <div class="cardItem">
+        <h1><p>Anagrama</p></h1>
+        <p>Dog Breed</p>
+      </div>
+    </mat-card>
+
+    <mat-card class="taskTodo">
+      <div class="cardItem">
+        <h1><p>Anagrama</p></h1>
+        <p>Dog Breed</p>
+      </div>
+    </mat-card>
+  </mat-card>
+
+  <mat-card class="task-card">
+    <div class="cardItem">
+      <h1>TOMORROW TASK</h1>
+    </div>
+
+    <mat-card class="taskTodo">
+      <div class="cardItem">
+        <h1><p>Anagrama</p></h1>
+        <p>Dog Breed</p>
+      </div>
+    </mat-card>
+
+    <mat-card class="taskTodo">
+      <div class="cardItem">
+        <h1><p>Anagrama</p></h1>
+        <p>Dog Breed</p>
+      </div>
+    </mat-card>
+
+    <mat-card class="taskTodo">
+      <div class="cardItem">
+        <h1><p>Anagrama</p></h1>
+        <p>Dog Breed</p>
+      </div>
+    </mat-card>
+
+    <mat-card class="taskTodo">
+      <div class="cardItem">
+        <h1><p>Anagrama</p></h1>
+        <p>Dog Breed</p>
+      </div>
+    </mat-card>
+
+    <mat-card class="taskTodo">
+      <div class="cardItem">
+        <h1><p>Anagrama</p></h1>
+        <p>Dog Breed</p>
+      </div>
+    </mat-card>
+  </mat-card>
+</div>

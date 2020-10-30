@@ -1,0 +1,32 @@
+#card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #f4f7fc;
+}
+.example-card {
+  width: 320px;
+  height: 150px;
+  margin: 30px;
+}
+
+.example-card p {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#header-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#header-row h1 {
+  margin: 0 0 0;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#header-row h3 {
+  margin: 0 0 0;
+}

@@ -1,0 +1,25 @@
+<div class="text-center">{{ counter }}</div>
+
+<div class="w-100">
+  <div
+    style="
+      height: 10px;
+      background-color: #20a8d8;
+      transition: width ease-in-out 0.3s;
+    "
+    [style.width.%]="counter"
+  ></div>
+</div>
+
+<mat-card
+  class="taskTodo"
+  style="width: 30%; height: 20%; margin: 10px"
+  *ngFor="let ex of experience"
+>
+  <div class="cardItem" style="text-align: center">
+    <h1>
+      <p>{{ ex.heading }}</p>
+    </h1>
+    <p>{{ ex.discription }}</p>
+  </div>
+</mat-card>

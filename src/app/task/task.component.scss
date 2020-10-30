@@ -1,0 +1,26 @@
+.task-card {
+  width: 320px;
+  height: auto;
+  margin: 30px;
+  background: #cad8f1;
+}
+
+.task-card p {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.taskTodo {
+  margin: 10px;
+}
+
+.taskColumn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardItem {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
